@@ -347,11 +347,11 @@ export default function TestimonialsSection() {
               <div className="testimonial-default">
                 <div className="testimonial-default-top">
                   <img
-                    sizes="(max-width: 1080px) 100vw, 1080px"
-                    srcSet="/images/24cc98383780dfa13717d467b24ac734_Untitled-3-p-500.webp 500w, /images/24cc98383780dfa13717d467b24ac734_Untitled-3-p-800.webp 800w, /images/Untitled-3.webp 1080w"
-                    alt=""
+                    sizes="(max-width: 873px) 100vw, 873px"
+                    srcSet="/images/d9aebce3be924d02cd896b41dadbc664_LOGO-p-500.webp 500w, /images/d9aebce3be924d02cd896b41dadbc664_LOGO-p-800.webp 800w, /images/LOGO.webp 873w"
+                    alt="NextClean"
                     loading="lazy"
-                    src="/images/Untitled-3.webp"
+                    src="/images/LOGO.webp"
                     className="testimonial-default-avatar"
                   />
                   <div className="testimonial-default-title">
