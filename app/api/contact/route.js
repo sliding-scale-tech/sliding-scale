@@ -11,8 +11,8 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    await resend.emails.send({
-      from: 'Sliding Scale <onboarding@resend.dev>',
+    const result = await resend.emails.send({
+      from: 'Sliding Scale <no-reply@slidingscale.xyz>',
       to: process.env.CONTACT_TO_EMAIL,
       replyTo: email,
       subject: `New inquiry from ${name}`,
@@ -106,9 +106,15 @@ export async function POST(request) {
       `,
     })
 
+    console.log('Resend result:', JSON.stringify(result))
+    if (result.error) {
+      console.error('Resend error:', result.error)
+      return NextResponse.json({ error: result.error.message }, { status: 500 })
+    }
+
     return NextResponse.json({ success: true })
   } catch (err) {
-    console.error('Contact form error:', err)
-    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 })
+    console.error('Contact form error:', err?.message || err)
+    return NextResponse.json({ error: err?.message || 'Failed to send email' }, { status: 500 })
   }
 }
