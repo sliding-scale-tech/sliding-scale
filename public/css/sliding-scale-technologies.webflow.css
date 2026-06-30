@@ -4948,6 +4948,7 @@
   margin-right: 1rem;
 }
 
+
 .uui-pricing01_component {
   grid-column-gap: 6rem;
   grid-row-gap: 4rem;
@@ -4960,7 +4961,7 @@
   margin-top: 4rem;
   padding: 30px;
   font-family: Inter, sans-serif;
-  display: block;
+  display: grid;
 }
 
 .uui-pricing01_content-list {
@@ -13639,5 +13640,6 @@
     grid-area: span 1 / span 3 / span 1 / span 3;
   }
 }
+
 
 
