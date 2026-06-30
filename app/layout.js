@@ -1,4 +1,4 @@
-import Script from 'next/script'
+import ScriptLoader from './components/ScriptLoader'
 import './globals.css'
 
 export const metadata = {
@@ -18,19 +18,11 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <Script id="webflow-mod" strategy="beforeInteractive">{`!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);`}</Script>
+        <script dangerouslySetInnerHTML={{ __html: `!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);` }} />
       </head>
       <body>
         {children}
-        <Script
-          src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js"
-          strategy="afterInteractive"
-          onLoad={() => {
-            const s = document.createElement('script')
-            s.src = '/js/webflow.js'
-            document.body.appendChild(s)
-          }}
-        />
+        <ScriptLoader />
       </body>
     </html>
   )
