@@ -30,6 +30,18 @@
   color: #fff !important;
 }
 
+/* Prevent pricing card from clipping at any viewport size */
+.uui-pricing01_component {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Contact form grid: textarea and button always span full width */
+.form_form .div-block-55,
+.form_form .form-button {
+  grid-column: 1 / -1;
+}
+
 /* Webflow preload visibility */
 html.w-mod-js:not(.w-mod-ix3) :is(.preload-logo, .preload-text, .hero-heading-h1, .process-line, .about-text) {
   visibility: hidden !important;

@@ -4951,13 +4951,14 @@
 
 .uui-pricing01_component {
   grid-column-gap: 6rem;
-  grid-row-gap: 4rem;
+  grid-row-gap: 2rem;
   background-color: #fff;
   border-radius: 10px;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-auto-columns: 1fr;
-  align-items: center;
+  align-items: stretch;
+  height: auto;
   margin-top: 4rem;
   padding: 30px;
   font-family: Inter, sans-serif;
@@ -8957,7 +8958,7 @@
   }
 
   .uui-pricing01_component {
-    height: 710px;
+    height: auto;
   }
 
   .brix---heading-h1-size-4 {
