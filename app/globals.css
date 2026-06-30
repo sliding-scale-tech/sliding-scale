@@ -1,5 +1,35 @@
 /* styles loaded via public/css */
 
+/* Force correct form input styles inside the CTA card */
+.cta-form-card .form_input {
+  color: #fff !important;
+  background-color: #0000001a !important;
+  border: 1px solid #ffffff1a !important;
+  border-radius: 1.125rem !important;
+  min-height: 3rem !important;
+  height: auto !important;
+  padding: .5rem 1rem !important;
+  font-size: 1rem !important;
+  width: 100%;
+  display: block;
+}
+.cta-form-card .form_input::placeholder {
+  color: #fff9 !important;
+  font-size: 1rem !important;
+}
+.cta-form-card .form_input:focus {
+  border-color: #fff9 !important;
+  outline: none !important;
+}
+.cta-form-card .form_input.is-text-area {
+  min-height: 8rem !important;
+  padding-top: .75rem !important;
+  resize: vertical;
+}
+.cta-form-card .brix---input-label {
+  color: #fff !important;
+}
+
 /* Webflow preload visibility */
 html.w-mod-js:not(.w-mod-ix3) :is(.preload-logo, .preload-text, .hero-heading-h1, .process-line, .about-text) {
   visibility: hidden !important;
